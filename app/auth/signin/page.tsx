@@ -34,8 +34,8 @@ import { Eye, EyeOff, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
 // Import logos and background image – paths unchanged
-import gatLogo from "@/public/images/gat-logo.png";
-import interactLogo from "@/public/gat-logos/INTERACT2K26.png";
+import gatLogo from "@/public/images/vvit-college-logo.webp";
+import interactLogo from "@/public/images/vvit-fest-logo-light.png";
 import MagneticButton from "@/components/ui/MagneticButton";
 
 export default function SignIn() {
@@ -117,7 +117,7 @@ export default function SignIn() {
         }}
         aria-hidden
       >
-        INTERACT
+        INNOVATE
       </div>
       <div
         className="font-display absolute right-[-2%] top-[4%] font-black leading-none select-none pointer-events-none"
@@ -128,7 +128,7 @@ export default function SignIn() {
         }}
         aria-hidden
       >
-        2K26
+        IGNITE '26
       </div>
 
       {/* Announcement marquee */}
@@ -158,7 +158,7 @@ export default function SignIn() {
               className="text-xs font-bold uppercase tracking-[0.18em] mx-12 flex-shrink-0"
               style={{ color: "hsl(var(--foreground) / 0.5)" }}
             >
-              Registrations Starting Soon · Stay tuned for updates · INTERACT 2K26 ·
+              Registrations Starting Soon · Stay tuned for updates · INNOVATE IGNITE '26 ·
             </span>
           ))}
         </div>
@@ -190,14 +190,14 @@ export default function SignIn() {
               <div className="mb-2 flex items-center justify-center gap-4">
                 <Image
                   src={gatLogo}
-                  alt="GAT Logo"
+                  alt="VVIT Logo"
                   width={52}
                   height={52}
                   className="object-contain opacity-100"
                 />
                 <Image
                   src={interactLogo}
-                  alt="INTERACT Logo"
+                  alt="INNOVATE IGNITE Logo"
                   width={52}
                   height={52}
                   className="object-contain opacity-100"
@@ -210,13 +210,13 @@ export default function SignIn() {
                   className="font-display text-4xl font-black tracking-tighter"
                   style={{ color: "hsl(var(--foreground))" }}
                 >
-                  INTERACT
+                  INNOVATE IGNITE
                 </h1>
                 <span
                   className="font-display text-2xl font-black tracking-tight"
                   style={{ color: "hsl(var(--primary))" }}
                 >
-                  2K26
+                  '26
                 </span>
               </div>
 

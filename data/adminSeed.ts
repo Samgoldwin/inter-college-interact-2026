@@ -15,7 +15,7 @@ export const adminDepartmentSeed: AdminDepartmentSeed[] = [
   {
     deptName: "ADMIN",
     deptCode: "1GAAdmin",
-    collegeName: "GAT ADMIN",
+    collegeName: "VVIT ADMIN",
     region: "Bangalore",
     email: "bhuvan.ar0101@gmail.com",
     phone: "+919876543210",
@@ -27,7 +27,7 @@ export const adminDepartmentSeed: AdminDepartmentSeed[] = [
   {
     deptName: "ISE",
     deptCode: "1GAIS-ISE",
-    collegeName: "GAT ISE",
+    collegeName: "VVIT ISE",
     region: "Bangalore",
     email: "ise.admin@globalacademy.edu",
     phone: "+919876543210",
@@ -39,7 +39,7 @@ export const adminDepartmentSeed: AdminDepartmentSeed[] = [
   {
     deptName: "CSE",
     deptCode: "1GAIS-CSE",
-    collegeName: "GAT CSE",
+    collegeName: "VVIT CSE",
     region: "Bangalore",
     email: "cse.admin@globalacademy.edu",
     phone: "+919876543211",
@@ -51,7 +51,7 @@ export const adminDepartmentSeed: AdminDepartmentSeed[] = [
   {
     deptName: "AIML",
     deptCode: "1GAIS-AIML",
-    collegeName: "GAT AIML",
+    collegeName: "VVIT AIML",
     region: "Bangalore",
     email: "aiml.admin@globalacademy.edu",
     phone: "+919876543212",
@@ -63,7 +63,7 @@ export const adminDepartmentSeed: AdminDepartmentSeed[] = [
   {
     deptName: "AIDS",
     deptCode: "1GAIS-AIDS",
-    collegeName: "GAT AIDS",
+    collegeName: "VVIT AIDS",
     region: "Bangalore",
     email: "aids.admin@globalacademy.edu",
     phone: "+919876543213",
@@ -75,7 +75,7 @@ export const adminDepartmentSeed: AdminDepartmentSeed[] = [
   {
     deptName: "CSAIML",
     deptCode: "1GAIS-CSAIML",
-    collegeName: "GAT CSAIML",
+    collegeName: "VVIT CSAIML",
     region: "Bangalore",
     email: "csaiml.admin@globalacademy.edu",
     phone: "+919876543214",
@@ -87,7 +87,7 @@ export const adminDepartmentSeed: AdminDepartmentSeed[] = [
   {
     deptName: "EC",
     deptCode: "1GAIS-EC",
-    collegeName: "GAT EC",
+    collegeName: "VVIT EC",
     region: "Bangalore",
     email: "ec.admin@globalacademy.edu",
     phone: "+919876543215",
@@ -99,7 +99,7 @@ export const adminDepartmentSeed: AdminDepartmentSeed[] = [
   {
     deptName: "EEE",
     deptCode: "1GAIS-EEE",
-    collegeName: "GAT EEE",
+    collegeName: "VVIT EEE",
     region: "Bangalore",
     email: "eee.admin@globalacademy.edu",
     phone: "+919876543216",
@@ -111,7 +111,7 @@ export const adminDepartmentSeed: AdminDepartmentSeed[] = [
   {
     deptName: "CV",
     deptCode: "1GAIS-CV",
-    collegeName: "GAT CV",
+    collegeName: "VVIT CV",
     region: "Bangalore",
     email: "cv.admin@globalacademy.edu",
     phone: "+919876543217",
@@ -123,7 +123,7 @@ export const adminDepartmentSeed: AdminDepartmentSeed[] = [
   {
     deptName: "ME",
     deptCode: "1GAIS-ME",
-    collegeName: "GAT ME",
+    collegeName: "VVIT ME",
     region: "Bangalore",
     email: "me.admin@globalacademy.edu",
     role: "SPOC",
@@ -135,7 +135,7 @@ export const adminDepartmentSeed: AdminDepartmentSeed[] = [
   {
     deptName: "AE",
     deptCode: "1GAIS-AE",
-    collegeName: "GAT AE",
+    collegeName: "VVIT AE",
     region: "Bangalore",
     email: "ae.admin@globalacademy.edu",
     role: "SPOC",

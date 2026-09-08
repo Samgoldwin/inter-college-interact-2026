@@ -109,7 +109,7 @@ export default function EventsPage() {
     const amount = Number(paymentAmount || 0).toFixed(2);
     const params = new URLSearchParams({
       pa: "71159801@ubin",
-      pn: "Global Academy Of Technology",
+      pn: "Vijaya Vittala Institute of Technology",
       am: amount,
       cu: "INR",
     });
@@ -439,7 +439,7 @@ function BankDetails() {
         <span className="font-medium">Bank Name:</span> Union Bank
       </p>
       <p>
-        <span className="font-medium">Account Holder Name:</span> Global Academy
+        <span className="font-medium">Account Holder Name:</span> Vijaya Vittala Institute of Technology
         Of Technology
       </p>
       <p>

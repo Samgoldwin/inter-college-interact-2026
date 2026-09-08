@@ -17,15 +17,15 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jet
 export const metadata = {
   metadataBase: new URL("https://www.vtufestinteract.com"),
   title: {
-    default: "Home - INTERACT 2026",
-    template: "%s - INTERACT 2026",
+    default: "Home - INNOVATE IGNITE '26",
+    template: "%s - INNOVATE IGNITE '26",
   },
   description:
-    "Join Global Academy of Technology for INTERACT 2026 – a celebration of innovation, creativity, and technology at one of the biggest college fests. Explore events, workshops, and performances designed for a memorable experience.",
+    "Join Vijaya Vittala Institute of Technology for INNOVATE IGNITE '26 – a celebration of innovation, creativity, and technology at one of the biggest college fests. Explore events, workshops, and performances designed for a memorable experience.",
   keywords: [
-    "INTERACT 2026",
-    "Global Academy of Technology",
-    "gat fest 2026",
+    "INNOVATE IGNITE '26",
+    "Vijaya Vittala Institute of Technology",
+    "vvit fest 2026",
     "college fest",
     "tech fest",
     "university festival",
@@ -35,28 +35,28 @@ export const metadata = {
   ],
   authors: [{ name: "Bhuvan S A", url: "https://www.bhuvansa.com/" }],
   creator: "Bhuvan S A",
-  publisher: "Global Academy of Technology",
+  publisher: "Vijaya Vittala Institute of Technology",
   openGraph: {
     url: "https://www.vtufestinteract.com",
-    siteName: "INTERACT 2026",
+    siteName: "INNOVATE IGNITE '26",
     type: "website",
-    title: "INTERACT 2026",
+    title: "INNOVATE IGNITE '26",
     description:
-      "Join Global Academy of Technology for INTERACT 2026 – a celebration of innovation, creativity, and technology with events, workshops, and performances designed for an unforgettable experience.",
+      "Join Vijaya Vittala Institute of Technology for INNOVATE IGNITE '26 – a celebration of innovation, creativity, and technology with events, workshops, and performances designed for an unforgettable experience.",
     images: [
       {
         url: "https://www.vtufestinteract.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "INTERACT 2026",
+        alt: "INNOVATE IGNITE '26",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "INTERACT 2026",
+    title: "INNOVATE IGNITE '26",
     description:
-      "Experience the best of innovation and creativity at INTERACT 2026 hosted by Global Academy of Technology.",
+      "Experience the best of innovation and creativity at INNOVATE IGNITE '26 hosted by Vijaya Vittala Institute of Technology.",
     site: "@vtufest2026",
     creator: "@bhuvansa",
     images: ["https://www.vtufestinteract.com/images/og-image.jpg"],

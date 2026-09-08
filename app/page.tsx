@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import interactLogo from "@/public/gat-logos/INTERACT2K26.png";
+import interactLogo from "@/public/images/vvit-event-logo.png";
 import { ArrowRight, MapPin, Calendar } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { categories, marqueeItems } from "@/data/homeData";
@@ -106,6 +106,164 @@ function Marquee() {
   );
 }
 
+// Events scheduled for INNOVATE IGNITE '26 (from the official plan)
+const eventsByDay = [
+  {
+    day: "DAY 1",
+    date: "04 Dec 2026",
+    events: [
+      {
+        name: "Ice Breaker",
+        venue: "Seminar Hall 1 & 2",
+        time: "9:30 AM – 11:00 AM",
+        rules: [
+          "All the team members must actively participate in the ice breaker.",
+          "There will be only one round.",
+          "Each team will be given 5–7 mins to complete their task.",
+          "Any required props must be arranged beforehand.",
+          "Marks will be deducted if it exceeds the time limit.",
+        ],
+      },
+      {
+        name: "Techninja (Quiz)",
+        venue: "Seminar Hall 1",
+        time: "11:00 AM – 1:00 PM",
+        rules: [
+          "Number of participants: 2.",
+          "There will be three rounds: Preliminary, Second and Final/Stage round.",
+          "The participants shall not be allowed to use mobile or other electronic instruments during quiz time.",
+        ],
+      },
+      {
+        name: "Code Conflux",
+        venue: "002 & 004",
+        time: "11:00 AM – 1:00 PM",
+        rules: [
+          "Number of participants: 2.",
+          "Contest is based on OOP & Python programming and bugs.",
+          "3 rounds are conducted - ROUND 1: Debugging, ROUND 2: Coding, ROUND 3: Solving with problem definition.",
+          "Judge's decision will be final.",
+        ],
+      },
+      {
+        name: "Symposium (Group Discussion)",
+        venue: "Placement Cell & 304",
+        time: "11:00 AM – 1:00 PM",
+        rules: [
+          "Number of participants: 2.",
+          "Topics will be provided one day prior.",
+          "Time limit: 20 min.",
+          "Skills required: Topic knowledge, fluency, relevance.",
+          "Do not debate; express the thoughts and keep the discussion going.",
+          "Give chance for others to talk. Present your ideas rather than personal attack.",
+          "Negative marking for violating the rules.",
+        ],
+      },
+      {
+        name: "Collage (Best Out of Waste)",
+        venue: "Sports Room",
+        time: "2:00 PM – 3:15 PM",
+        rules: [
+          "Team members: 2.",
+          "Teams should bring newspapers/magazines/cello tape/scissors/drawing sheets and so on.",
+          "Time limit: 45 minutes.",
+          "Each team has to explain about the collage at the end.",
+        ],
+      },
+      {
+        name: "Crucial Beats (Singing)",
+        venue: "Seminar Hall 2",
+        time: "2:00 PM – 3:15 PM",
+        rules: [
+          "Participant will not be allowed to refer to the lyrics.",
+          "Time limit for the competition is 4 minutes.",
+          "Choice of song should be in Kannada, Hindi and English.",
+          "Participants should bring their own musical instrument.",
+          "The song should not be derogatory language.",
+          "Participants will be judged on song selection, voice clarity and rhythm.",
+        ],
+      },
+    ],
+  },
+  {
+    day: "DAY 2",
+    date: "05 Dec 2026",
+    events: [
+      {
+        name: "VV-Care",
+        venue: "Seminar Hall 1 & 204",
+        time: "9:30 AM – 11:00 AM",
+        rules: [
+          "Set an objective for the video content.",
+          "Capture a video with vendors and interview them well in advance.",
+          "2 students can display the same video in the competition and analyse the issues of vendors and give solutions to the vendor problems.",
+          "Time limit for the competition is 6 mins.",
+        ],
+      },
+      {
+        name: "Cooking Without Fire",
+        venue: "304 & 305",
+        time: "10:00 AM – 11:15 AM",
+        rules: [
+          "Bring your own materials.",
+          "No pre-cooked items and chopped items.",
+          "Prepare a menu.",
+          "At least one nutritious food should be prepared and the benefits should be presented to judges.",
+          "Only 2 participants are allowed.",
+          "Time divided into 50 mins for cooking, 10 mins for organising the food, 15 min for judgement.",
+        ],
+      },
+      {
+        name: "Dance Elite",
+        venue: "Seminar Hall 2",
+        time: "10:00 AM – 12:00 PM",
+        rules: [
+          "Students should enroll before 2nd December.",
+          "Competition includes all forms of dance.",
+          "Each performance had 10 mins time limit.",
+          "Competitors must submit their music or sound tracks on or before 4th Dec (format mp3, WAV).",
+          "Competition format: Solo, pair and groups (max 5).",
+        ],
+      },
+      {
+        name: "Talent Mania",
+        venue: "Seminar Hall 1",
+        time: "11:30 AM – 1:15 PM",
+        rules: [
+          "Free style.",
+          "Minimum 3 mins, max 5 mins.",
+        ],
+      },
+      {
+        name: "Dumb Charades",
+        venue: "Seminar Hall 2",
+        time: "2:00 PM – 3:45 PM",
+        rules: [
+          "5 members in each group.",
+          "Titles will be given on the spot.",
+          "2 mins will be given to guess each title.",
+          "If one group doesn't guess the title it will be passed to the next group.",
+          "Players should not speak; they have to use hand signals, body language and facial expressions.",
+          "Titles will be based on movies, songs, things (Kannada, Hindi, English).",
+        ],
+      },
+      {
+        name: "BGMI & Free Fire",
+        venue: "004",
+        time: "2:00 PM – 4:00 PM",
+        rules: [
+          "4 player squad.",
+          "Both Free Fire and BGMI.",
+          "Registration ₹50 for BGMI.",
+          "Registration ₹50 for Free Fire.",
+          "Map shall be revealed at the time of play.",
+          "Cash prize for winner and runner-up with certificates.",
+        ],
+      },
+    ],
+  },
+];
+
 /* ─────────────────────────────────────────────
     PAGE
 ───────────────────────────────────────────── */
@@ -136,7 +294,7 @@ export default function Home() {
 
         {/* ghost year watermark */}
         <div
-          className="absolute top-[12%] select-none pointer-events-none transition-all duration-500 max-[550px]:left-1/2 max-[550px]:-translate-x-1/2 max-[550px]:opacity-[0.05] min-[551px]:right-[-2%] min-[551px]:opacity-[0.9]"
+          className="absolute top-[28%] select-none pointer-events-none transition-all duration-500 max-[550px]:left-1/2 max-[550px]:-translate-x-1/2 max-[550px]:opacity-[0.05] min-[551px]:right-[2%] min-[551px]:opacity-[0.9]"
           style={{ width: "clamp(280px, 40vw, 700px)" }}
           aria-hidden
         >
@@ -156,7 +314,7 @@ export default function Home() {
             transition={{ duration: 0.45 }}
           >
             <span className="pill-badge mb-8 inline-flex">
-              Global Academy of Technology Presents
+              Vijaya Vittala Institute of Technology Presents
             </span>
           </motion.div>
 
@@ -173,8 +331,6 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            NATIONAL LEVEL
-            <br />
             <span style={{ color: "hsl(var(--primary))" }}>INTER-COLLEGIATE</span>
             <br />
             <span
@@ -259,7 +415,7 @@ export default function Home() {
               style={{ color: "hsl(var(--muted))" }}
             >
               <MapPin size={12} />
-              GAT Campus, Bengaluru
+              VVIT Campus, Bengaluru
             </span>
           </motion.div>
         </div>
@@ -271,98 +427,133 @@ export default function Home() {
       {/* ══ MARQUEE ══════════════════════════════════════════════════════ */}
       <Marquee />
 
-      {/* ══ CATEGORIES ═══════════════════════════════════════════════════ */}
+      {/* ══ EVENTS (from INNOVATE IGNITE plan) ═══════════════════════════ */}
       <section
-        className="py-28"
+        className="py-28 relative overflow-hidden"
         style={{ background: "hsl(var(--card))", fontFamily: "'Outfit', sans-serif" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* section header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14">
             <div>
-              <span className="eyebrow">{categories.reduce((acc, c) => acc + c.count, 0)} events across {categories.length} domains</span>
+              <span className="eyebrow">All Events</span>
               <h2
                 className="font-display text-5xl md:text-6xl font-black leading-[0.95]"
                 style={{ color: "hsl(var(--foreground))" }}
               >
-                CHOOSE YOUR
+                EVENT
                 <br />
-                <span style={{ color: "hsl(var(--primary))" }}>DOMAIN</span>
+                <span style={{ color: "hsl(var(--primary))" }}>LINEUP</span>
               </h2>
             </div>
             <p
               className="text-base leading-relaxed md:max-w-xs"
               style={{ color: "hsl(var(--muted-foreground))" }}
             >
-              From high-stakes hackathons to mesmerizing musical performances — find your stage.
+              Two days, twelve events — from technical face-offs to cultural showcases. Pick your favorites and join the action.
             </p>
           </div>
 
-          {/* cards grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {categories.map((cat, i) => {
-              const Icon = cat.icon;
-              return (
-                <motion.div
-                  key={cat.name}
-                  initial={{ opacity: 0, y: 22 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ delay: i * 0.08, duration: 0.42 }}
+          {/* day columns */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {eventsByDay.map((day, di) => (
+              <motion.div
+                key={day.day}
+                initial={{ opacity: 0, y: 22 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: di * 0.1, duration: 0.42 }}
+                className="flex flex-col gap-4"
+              >
+                {/* day header */}
+                <div
+                  className="px-6 py-4 flex items-center justify-between rounded-[var(--radius)] border"
+                  style={{ borderColor: "hsl(var(--border))", background: "hsl(var(--secondary) / 0.08)" }}
                 >
-                  <Link
-                    href={`/events?category=${cat.name.toLowerCase()}`}
-                    className="cat-card group block rounded-[var(--radius)] p-6"
-                    style={{
-                      background: "hsl(var(--background))",
-                      border: `1px solid ${cat.accentBorder}`,
-                      textDecoration: "none",
-                    }}
+                  <h3
+                    className="font-display text-2xl font-black tracking-tight"
+                    style={{ color: "hsl(var(--foreground))" }}
                   >
-                    {/* icon box */}
-                    <div
-                      className="w-12 h-12 rounded-lg flex items-center justify-center mb-5"
-                      style={{ background: cat.accentLight, color: cat.accent }}
-                    >
-                      <Icon size={22} />
-                    </div>
+                    {day.day}
+                  </h3>
+                  <span
+                    className="font-mono-jb text-xs uppercase tracking-[0.18em]"
+                    style={{ color: "hsl(var(--muted))" }}
+                  >
+                    {day.date}
+                  </span>
+                </div>
 
-                    {/* name */}
-                    <h3
-                      className="font-display text-2xl font-bold mb-1 tracking-tight"
-                      style={{ color: "hsl(var(--foreground))" }}
-                    >
-                      {cat.name}
-                    </h3>
-
-                    {/* count */}
-                    <p
-                      className="font-mono-jb text-xs mb-4"
-                      style={{ color: cat.accent, fontWeight: 500 }}
-                    >
-                      {cat.count} events
-                    </p>
-
-                    {/* tags */}
-                    <div className="flex flex-wrap gap-1.5">
-                      {cat.tags.map((t) => (
-                        <span key={t} className="tag-chip">
-                          {t}
+                {/* event blocks */}
+                {day.events.map((ev, i) => (
+                  <motion.div
+                    key={ev.name}
+                    initial={{ opacity: 0, y: 18 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ delay: 0.08 + i * 0.06, duration: 0.4 }}
+                    className="rounded-[var(--radius)] overflow-hidden border"
+                    style={{ borderColor: "hsl(var(--border))", background: "hsl(var(--background))" }}
+                  >
+                    {/* event header row */}
+                    <div className="px-6 py-4 flex items-center justify-between gap-4">
+                      <div className="flex items-start gap-3 min-w-0">
+                        <span
+                          className="font-display text-lg font-black leading-none mt-0.5"
+                          style={{ color: "hsl(var(--secondary))" }}
+                        >
+                          {String(i + 1).padStart(2, "0")}
                         </span>
-                      ))}
+                        <div className="min-w-0">
+                          <p
+                            className="font-display text-lg font-bold tracking-tight truncate"
+                            style={{ color: "hsl(var(--foreground))" }}
+                          >
+                            {ev.name}
+                          </p>
+                          <p
+                            className="font-mono-jb text-xs mt-1"
+                            style={{ color: "hsl(var(--muted))" }}
+                          >
+                            {ev.venue}
+                          </p>
+                        </div>
+                      </div>
+                      <span
+                        className="font-mono-jb text-xs font-semibold whitespace-nowrap px-3 py-1.5 rounded-full"
+                        style={{
+                          color: "hsl(var(--primary))",
+                          background: "hsl(var(--primary) / 0.08)",
+                        }}
+                      >
+                        {ev.time}
+                      </span>
                     </div>
 
-                    {/* arrow reveal */}
-                    <div
-                      className="flex items-center gap-1 mt-5 text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                      style={{ color: cat.accent }}
+                    {/* rules list */}
+                    <ul
+                      className="border-t px-6 py-4 space-y-2"
+                      style={{ borderColor: "hsl(var(--border))" }}
                     >
-                      Browse events <ArrowRight size={12} />
-                    </div>
-                  </Link>
-                </motion.div>
-              );
-            })}
+                      {ev.rules.map((rule) => (
+                        <li key={rule} className="flex items-start gap-2.5">
+                          <span
+                            className="mt-1.5 shrink-0 h-1.5 w-1.5 rounded-full"
+                            style={{ background: "hsl(var(--primary))" }}
+                          />
+                          <span
+                            className="text-sm leading-relaxed"
+                            style={{ color: "hsl(var(--muted-foreground))" }}
+                          >
+                            {rule}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -382,7 +573,7 @@ export default function Home() {
           }}
           aria-hidden
         >
-          INTERACT
+          INNOVATE
         </div>
         {/* ghost watermark */}
         <div
@@ -394,7 +585,7 @@ export default function Home() {
           }}
           aria-hidden
         >
-          2K26
+          IGNITE '26
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -417,7 +608,7 @@ export default function Home() {
                 className="text-base leading-relaxed mb-8 max-w-sm"
                 style={{ color: "hsl(var(--muted-foreground))" }}
               >
-                Plan your days ahead to make the most of INTERACT 2026. Every slot is a story — pick yours.
+                Plan your days ahead to make the most of INNOVATE IGNITE '26. Every slot is a story — pick yours.
               </p>
               <button
                 disabled
@@ -457,7 +648,7 @@ export default function Home() {
           >
             READY TO
             <br />
-            <span style={{ color: "hsl(var(--secondary))" }}>INTERACT?</span>
+            <span style={{ color: "hsl(var(--secondary))" }}>INNOVATE IGNITE '26?</span>
           </h2>
           <p
             className="text-base leading-relaxed mb-8"

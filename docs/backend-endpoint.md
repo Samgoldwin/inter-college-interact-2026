@@ -83,7 +83,7 @@ Request:
   "email": "user@example.com",
   "name": "John Doe",
   "phone": "+919876543210",
-  "collegeName": "Global Academy of Technology",
+  "collegeName": "Vijaya Vittala Institute of Technology",
   "password": "Strong@123",
   "confirmPassword": "Strong@123"
 }
@@ -100,7 +100,7 @@ Success `200`:
       "email": "user@example.com",
       "name": "John Doe",
       "phone": "+919876543210",
-      "collegeName": "Global Academy of Technology",
+      "collegeName": "Vijaya Vittala Institute of Technology",
       "role": "PARTICIPANT"
     }
   }
@@ -245,7 +245,7 @@ Request (example):
 {
   "name": "John Doe",
   "phone": "+919876543210",
-  "collegeName": "Global Academy of Technology",
+  "collegeName": "Vijaya Vittala Institute of Technology",
   "photoUrl": "https://uploadthing.../photo.jpg",
   "collegeIdCardUrl": "https://uploadthing.../id.jpg"
 }

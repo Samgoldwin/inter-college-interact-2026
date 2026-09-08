@@ -138,7 +138,7 @@ export const interDepartmentEvents: EventCategory[] = [
     },
     {
         eventNo: 13,
-        eventName: "Voice of GAT (Faculty)",
+        eventName: "Voice of VVIT (Faculty)",
         category: "MUSIC",
         maxParticipant: 1,
         id: "",
@@ -148,7 +148,7 @@ export const interDepartmentEvents: EventCategory[] = [
     },
     {
         eventNo: 14,
-        eventName: "Voice of GAT (Student)",
+        eventName: "Voice of VVIT (Student)",
         category: "MUSIC",
         maxParticipant: 1,
         id: "",

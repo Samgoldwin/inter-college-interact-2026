@@ -303,7 +303,7 @@ const collegeMapping = [
     studentStart: 3251,
   },
   {
-    collegeName: "GLOBAL ACADEMY OF TECHNOLOGY",
+    collegeName: "VIJAYA VITTALA INSTITUTE OF TECHNOLOGY",
     collegeCode: "GA-047",
     studentStart: 3301,
   },
@@ -1310,9 +1310,9 @@ export function DataTable({ data }: { data: Data[] }) {
     });
     const excelData: any[][] = [];
     excelData.push([
-      "Visvesvaraya Technological University in association with Global Academy of Technology",
+      "Visvesvaraya Technological University in association with Vijaya Vittala Institute of Technology",
     ]);
-    excelData.push(["24th VTU Youth Fest @ GAT"]);
+    excelData.push(["INNOVATE IGNITE '26 @ VVIT"]);
     excelData.push([]);
     Object.keys(collegeData).forEach((collegeName) => {
       const rowsForCollege = collegeData[collegeName].rows;

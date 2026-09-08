@@ -16,7 +16,7 @@ async function generateAdminHash() {
       `INSERT INTO "Users" (email, phone, collegeName, collegeCode, region, password, role, "createdAt") VALUES`,
     );
     console.log(
-      `('admin@interact2k26.com', '9999999999', 'Global Academy of Technology', 'ADMIN001', 'Bangalore', '${hash}', 'ADMIN', NOW());`,
+      `('admin@interact2k26.com', '9999999999', 'Vijaya Vittala Institute of Technology', 'ADMIN001', 'Bangalore', '${hash}', 'ADMIN', NOW());`,
     );
     console.log("");
     console.log("=== Login Credentials ===");

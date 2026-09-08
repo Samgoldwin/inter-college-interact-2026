@@ -22,7 +22,7 @@ const Navbar = () => {
      
       
       <div className="flex flex-col items-center justify-center text-center py-6">
-        <h1 className="text-5xl font-bold mb-5">GAT VTU Youth Fest 2025</h1>
+        <h1 className="text-5xl font-bold mb-5">VVIT INNOVATE IGNITE '26</h1>
         <p className="text-2xl mb-10 py-6 text-[#3f3f3f]">
           Celebrating 25 Years of Excellence
         </p>

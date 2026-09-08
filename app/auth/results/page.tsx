@@ -47,7 +47,7 @@ import logo43 from "@/public/images/logo43.png";
 import logo44 from "@/public/images/logo44.png";
 import logo45 from "@/public/images/logo45.png";
 import logo46 from "@/public/images/logo46.png";
-import logo47 from "@/public/images/gat-logo.png";
+import logo47 from "@/public/images/vvit-college-logo.webp";
 import logo48 from "@/public/images/logo48.png";
 import logo49 from "@/public/images/logo49.png";
 import logo50 from "@/public/images/logo50.png";
@@ -160,7 +160,7 @@ const colleges: College[] = [
   { code: "GA-044", name: "S.J.C INSTITUTE OF TECHNOLOGY", logo: logo44 },   // GA-044
   { code: "GA-045", name: "DON BOSCO INSTITUTE OF TECHNOLOGY", logo: logo45 },   // GA-045
   { code: "GA-046", name: "SDM COLLEGE OF ENGINEERING AND TECHNOLOGY", logo: logo46 },   // GA-046
-  { code: "GA-047", name: "GLOBAL ACADEMY OF TECHNOLOGY", logo: logo47 },   // GA-047
+  { code: "GA-047", name: "VIJAYA VITTALA INSTITUTE OF TECHNOLOGY", logo: logo47 },   // GA-047
   { code: "GA-048", name: "NITTE MEENAKSHI INSTITUTE OF TECHNOLOGY", logo: logo48 }, // GA-048
 { code: "GA-049", name: "BAPUJI INSTITUTE OF ENGINEERING AND TECHNOLOGY",  logo: logo49 }, // GA-049
 { code: "GA-050", name: "SRI VENKATESHWARA COLLEGE OF ENGINEERING",             logo: logo50 }, // GA-050

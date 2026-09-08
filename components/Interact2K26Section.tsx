@@ -7,7 +7,7 @@ const Interact2K26Section = () => {
         {/* Main Heading */}
         <div className="text-center mb-12">
           {/* <h2 className="text-5xl md:text-6xl font-extrabold text-[#003366] mb-4">
-            INTERACT 2K26 IS BACK!
+            INNOVATE IGNITE '26 IS BACK!
           </h2> */}
           <p className="text-2xl md:text-3xl font-bold text-[#D32F23] mb-2">
             With a Spectacular Lineup of Events
@@ -127,7 +127,7 @@ const Interact2K26Section = () => {
             brilliance, creativity, and celebration.
           </p>
           <p className="text-lg font-semibold text-[#D32F23] mb-4">
-            Coming Soon... | Global Academy of Technology, Bengaluru
+            Coming Soon... | Vijaya Vittala Institute of Technology, Bengaluru
           </p>
           <p className="text-black/60 italic">
             "The only limit is your imagination. Come, celebrate, perform,

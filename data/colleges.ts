@@ -64,7 +64,7 @@ export const colleges = [
             { name: "EAST WEST COLLEGE OF ENGG", code: "1EE" },
             { name: "EAST WEST INSTITUTE OF TECHNOLOGY", code: "1EW" },
             { name: "GHOUSIA COLLEGE OF ENGINEERING", code: "1GC" },
-            { name: "GLOBAL ACADEMY OF TECHNOLOGY", code: "1GA" },
+            { name: "VIJAYA VITTALA INSTITUTE OF TECHNOLOGY", code: "1GA" },
             { name: "GOPALAN COLLEGE OF ENGINEERING MANAGEMENT", code: "1GD" },
             { name: "GOPALAN SCHOOL OF ARCHITECTURE & PLANNING", code: "1GO" },
             {

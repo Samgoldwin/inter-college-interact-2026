@@ -6,8 +6,9 @@ import Image from "next/image";
 import { Menu, X, Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import gatLogo from "@/public/gat-logos/GAT_Linear Logo.png";
-import interactLogo from "@/public/gat-logos/INTERACT2K26.png";
+import gatLogo from "@/public/images/vvit-college-logo-with-name.png";
+import gatLogoWhite from "@/public/images/vvit-college-logo-white.png";
+import interactLogo from "@/public/images/vvit-event-logo.png";
 import LoginLogoutButton from "./LoginLogoutButton";
 
 const navLinks = [
@@ -40,8 +41,8 @@ const Navbar = () => {
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 group flex items-center">
               <Image
-                src={gatLogo}
-                alt="GAT Logo"
+                src={scrolled ? gatLogoWhite : gatLogo}
+                alt="VVIT Logo"
                 width={160}
                 height={90}
                 className={`object-contain h-10 md:h-12 w-auto transition-all duration-300 ${scrolled ? 'opacity-90' : 'opacity-100'}`}
@@ -49,7 +50,7 @@ const Navbar = () => {
               />
               <Image
                 src={interactLogo}
-                alt="Interact Logo"
+                alt="INNOVATE IGNITE Logo"
                 width={160}
                 height={90}
                 className={`object-contain h-10 md:h-12 w-auto transition-all duration-300 ${scrolled ? 'opacity-90' : 'opacity-100'}`}

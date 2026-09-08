@@ -7,7 +7,7 @@ const GATInfoSection = () => {
       <section className="bg-[#003366] text-white py-8 px-4 md:px-8">
         <div className="mb-6 text-left">
           <p className="text-4xl font-bold text-[#F4D03F]">
-            GLOBAL ACADEMY OF TECHNOLOGY
+            VIJAYA VITTALA INSTITUTE OF TECHNOLOGY
           </p>
           <p className="text-2xl font-bold text-[#D32F23] mt-2">
             GROWING AHEAD OF TIME
@@ -29,7 +29,7 @@ const GATInfoSection = () => {
                 />
               </div>
               <p>
-                Global Academy of Technology is an A-grade College counted among
+                Vijaya Vittala Institute of Technology is an A-grade College counted among
                 the best engineering colleges in Bangalore. Equipped with modern
                 technology and top-notch infrastructure, the institution fosters
                 an ambience and culture that accelerates learning. The
@@ -85,7 +85,7 @@ const GATInfoSection = () => {
             </svg>
             <a href="https://maps.app.goo.gl/SQYGicDVGunvnhYc7">
               <span className="text-blue-200 font-semibold">
-                Global Academy of Technology
+                Vijaya Vittala Institute of Technology
               </span>
             </a>
           </div>

@@ -17,13 +17,13 @@ const Home = () => {
       </div>
 
       <div className="relative z-10">
-        {/* Blue Box Section: Global Academy of Technology */}
+        {/* Blue Box Section: Vijaya Vittala Institute of Technology */}
         <div className="max-w-5xl mx-auto border border-gray-300 rounded-lg overflow-hidden shadow-lg mb-8">
           <section className="bg-[#003366] text-white py-8 px-4 md:px-8">
             {/* Header Titles */}
             <div className="mb-6 text-left">
               <p className="text-4xl font-bold  text-[#F4D03F]">
-                GLOBAL ACADEMY OF TECHNOLOGY
+                VIJAYA VITTALA INSTITUTE OF TECHNOLOGY
               </p>
               <p className="text-2xl font-bold text-[#D32F23] mt-2">
                 GROWING AHEAD OF TIME
@@ -47,7 +47,7 @@ const Home = () => {
                     />
                   </div>
                   <p>
-                    Global Academy of Technology is an A-grade Cooollege counted
+                    Vijaya Vittala Institute of Technology is an A-grade Cooollege counted
                     among the bestesr engineering colleges in Bangalore. Equipped
                     with modern technology and top‑notch infrastructure, the
                     institution fosters an ambience and culture that accelerates
@@ -59,12 +59,12 @@ const Home = () => {
                 </div>
               </div>
               <div>
-                <p className="font-semibold">-- Why is 2025 iconic for GAT?</p>
+                <p className="font-semibold">-- Why is 2025 iconic for VVIT?</p>
                 <p>
                   This year 2025 marks a momentous milestone as the institution
                   celebrates its Silver Jubilee – 25 years of academic excellence,
                   innovation, and transformative education. With a legacy of
-                  shaping future leaders and achievers, GAT continues to set
+                  shaping future leaders and achievers, VVIT continues to set
                   benchmarks in higher education, solidifying its position as a
                   premier destination for aspiring engineers and managers.
                 </p>
@@ -105,7 +105,7 @@ const Home = () => {
                 </svg>
                 <a href="https://maps.app.goo.gl/SQYGicDVGunvnhYc7">
                   <span className="text-blue-200 font-semibold">
-                    Global Academy of Technology
+                    Vijaya Vittala Institute of Technology
                   </span>
                 </a>
               </div>
@@ -126,7 +126,7 @@ const Home = () => {
             </div>
             <div className="text-center mb-12">
               <h3 className="text-[#F4D03F] font-bold text-3xl mb-4">
-                VTU Youth Fest 2025 – Brand Karnataka
+                INNOVATE IGNITE '26 – Brand Karnataka
               </h3>
               <p className="text-xl text-[#003366]">
                 Celebrating Culture, Tradition &amp; the Spirit of Bengaluru
@@ -138,7 +138,7 @@ const Home = () => {
               <p className="text-xl text-justify text-[#003366] mb-6">
                 Karnataka is a land where tradition meets modernity, where ancient
                 art forms thrive alongside contemporary creativity. This year, the
-                VTU Youth Fest 2025 proudly presents "Brand Karnataka", a theme
+                INNOVATE IGNITE '26 proudly presents "Brand Karnataka", a theme
                 dedicated to celebrating our state’s rich cultural heritage and the
                 dynamic spirit of Bengaluru—the heart of Karnataka!
               </p>
@@ -230,7 +230,7 @@ const Home = () => {
               </div>
 
               <h4 className="text-2xl font-bold text-[#D32F23] mb-4">
-                Experience the Cultural Brilliance of Brand Karnataka at VTU Youth Fest 2025
+                Experience the Cultural Brilliance of Brand Karnataka at INNOVATE IGNITE '26
               </h4>
               <p className="text-xl text-justify text-[#003366] mb-4">
                 This grand cultural fest will bring together the best talents from across
@@ -238,8 +238,8 @@ const Home = () => {
                 by the essence of Namma Karnataka and Namma Bengaluru.
               </p>
               <p className="text-xl text-[#003366] mb-4">
-                <strong>Date:</strong> 24th - 27th March 2025  • <strong>Venue:</strong> Global Academy
-                of Technology, Bengaluru
+                <strong>Date:</strong> 24th - 27th March 2025  • <strong>Venue:</strong> Vijaya Vittala
+                Institute of Technology, Bengaluru
               </p>
               <p className="text-xl text-justify text-[#003366]">
                 Come, immerse yourself in the soul of Karnataka and the pulse of Bengaluru.

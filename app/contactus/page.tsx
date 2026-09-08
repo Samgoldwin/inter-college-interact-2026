@@ -173,7 +173,7 @@ const ContactUs: React.FC = () => {
               <Card className="flex-1 max-w-lg p-6 bg-white shadow-md">
                 <CardHeader>
                   <CardTitle className="text-gray-900 text-center">
-                    Global Academy of Technology
+                    Vijaya Vittala Institute of Technology
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">

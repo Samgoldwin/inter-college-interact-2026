@@ -172,7 +172,7 @@ export async function POST(request: Request) {
                 from: process.env.SMTP_EMAIL,
                 to: email,
                 subject:
-                    "Login Credentials for Interact-2025 Registration Portal",
+                    "Login Credentials for INNOVATE IGNITE '26 Registration Portal",
                 html: `
 <!DOCTYPE html>
 <html>
@@ -203,9 +203,9 @@ export async function POST(request: Request) {
   <div class="container">
     <p style="margin-bottom: 16px;">Respect Principal,</p>
     <p style="margin-bottom: 16px;"><strong>${newUser.collegeName}</strong></p>
-    <p style="margin-bottom: 16px;">Greetings from Global Academy of Technology.</p>
+    <p style="margin-bottom: 16px;">Greetings from Vijaya Vittala Institute of Technology.</p>
     <p style="margin-bottom: 16px;">
-      We are pleased to inform you that your institution’s registration on the official website for Interact-2025 – The 24th VTU Youth Fest has been successfully created.
+      We are pleased to inform you that your institution’s registration on the official website for INNOVATE IGNITE '26 – The 24th VTU Youth Fest has been successfully created.
       Below are your login credentials to access the portal:
     </p>
     <ul style="margin-bottom: 16px; padding-left: 20px;">
@@ -229,7 +229,7 @@ export async function POST(request: Request) {
       • Akshith M, Student Convener – 📞 <a href="tel:9945864767">9945864767</a>
     </p>
     <p style="margin-bottom: 16px;">Thank you for your support and cooperation.</p>
-    <p style="margin-bottom: 0;">Warm regards,<br/>Team Interact<br/>Global Academy of Technology</p>
+    <p style="margin-bottom: 0;">Warm regards,<br/>Team Interact<br/>Vijaya Vittala Institute of Technology</p>
   </div>
 </body>
 </html>

@@ -22,8 +22,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
-import gatLogo from "@/public/images/gat-logo.png";
-import interactLogo from "@/public/gat-logos/INTERACT2K26.png";
+import gatLogo from "@/public/images/vvit-college-logo.webp";
+import interactLogo from "@/public/images/vvit-fest-logo-light.png";
 
 const schema = z.object({
   newPassword: z
@@ -108,14 +108,14 @@ function ResetPasswordContent() {
               <div className="mb-2 flex items-center justify-center gap-4">
                 <Image
                   src={gatLogo}
-                  alt="GAT Logo"
+                  alt="VVIT Logo"
                   width={52}
                   height={52}
                   className="object-contain"
                 />
                 <Image
                   src={interactLogo}
-                  alt="INTERACT Logo"
+                  alt="INNOVATE IGNITE Logo"
                   width={52}
                   height={52}
                   className="object-contain"
@@ -133,7 +133,7 @@ function ResetPasswordContent() {
                 className="font-mono-jb text-xs font-semibold tracking-[0.2em] uppercase"
                 style={{ color: "hsl(var(--muted))" }}
               >
-                INTERACT 2K26
+                INNOVATE IGNITE '26
               </p>
             </div>
           </div>

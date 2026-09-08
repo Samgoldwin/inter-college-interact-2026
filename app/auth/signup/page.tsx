@@ -31,8 +31,8 @@ import {
 import { UploadButton } from "@/utils/uploadthing";
 import { useAuthContext } from "@/contexts/auth-context";
 
-import gatLogo from "@/public/images/gat-logo.png";
-import interactLogo from "@/public/gat-logos/INTERACT2K26.png";
+import gatLogo from "@/public/images/vvit-college-logo.webp";
+import interactLogo from "@/public/images/vvit-fest-logo-light.png";
 
 // ─── Schemas ────────────────────────────────────────────────────────────────
 
@@ -207,7 +207,7 @@ export default function SignUp() {
       if (data.success) {
         setIsLoggedIn(true);
         toast.success("Registration complete!", {
-          description: "Welcome to INTERACT 2K26!",
+          description: "Welcome to INNOVATE IGNITE '26!",
         });
         router.push("/register/firstEventSelection");
       } else {
@@ -259,14 +259,14 @@ export default function SignUp() {
         style={{ fontSize: "clamp(90px,14vw,170px)", color: "hsl(var(--primary) / 0.1)", letterSpacing: "-0.02em" }}
         aria-hidden
       >
-        INTERACT
+        INNOVATE
       </div>
       <div
         className="font-display absolute right-[-2%] top-[4%] font-black leading-none select-none pointer-events-none"
         style={{ fontSize: "clamp(90px,14vw,170px)", color: "hsl(var(--primary) / 0.1)", letterSpacing: "-0.02em" }}
         aria-hidden
       >
-        2K26
+        IGNITE '26
       </div>
 
       {/* Card */}
@@ -281,15 +281,15 @@ export default function SignUp() {
           <div className="px-8 pt-8 pb-6 border-b" style={{ borderColor: "hsl(var(--border))" }}>
             <div className="flex flex-col items-center text-center gap-3">
               <div className="mb-2 flex items-center justify-center gap-4">
-                <Image src={gatLogo} alt="GAT Logo" width={52} height={52} className="object-contain" />
-                <Image src={interactLogo} alt="INTERACT Logo" width={52} height={52} className="object-contain" />
+                <Image src={gatLogo} alt="VVIT Logo" width={52} height={52} className="object-contain" />
+                <Image src={interactLogo} alt="INNOVATE IGNITE Logo" width={52} height={52} className="object-contain" />
               </div>
               <div className="flex items-center gap-2">
                 <h1 className="font-display text-4xl font-black tracking-tighter" style={{ color: "hsl(var(--foreground))" }}>
-                  INTERACT
+                  INNOVATE IGNITE
                 </h1>
                 <span className="font-display text-2xl font-black tracking-tight" style={{ color: "hsl(var(--primary))" }}>
-                  2K26
+                  '26
                 </span>
               </div>
               <p className="font-mono-jb text-xs font-semibold tracking-[0.2em] uppercase" style={{ color: "hsl(var(--muted))" }}>

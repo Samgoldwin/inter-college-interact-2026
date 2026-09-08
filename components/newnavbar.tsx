@@ -140,11 +140,11 @@ const NavBar = () => {
                                                             src="/images/college-logo.png"
                                                             height={30}
                                                             width={30}
-                                                            alt="Global Academy of Technology"
+                                                            alt="Vijaya Vittala Institute of Technology"
                                                         />
                                                     </div>
                                                     <div className="mb-0 mt-4 text-base font-medium">
-                                                        Global Academy of Technology
+                                                        Vijaya Vittala Institute of Technology
                                                     </div>
                                                     <p className="text-sm leading-tight text-muted-foreground">
                                                         Growing Ahead of time..{" "}
