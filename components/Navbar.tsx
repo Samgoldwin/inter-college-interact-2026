@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import gatLogo from "@/public/images/vvit-college-logo-with-name.png";
 import gatLogoWhite from "@/public/images/vvit-college-logo-white.png";
 import interactLogo from "@/public/images/vvit-event-logo.png";
+import interactLogoWhite from "@/public/images/vvit-event-logo-white.png";
 import LoginLogoutButton from "./LoginLogoutButton";
 
 const navLinks = [
@@ -49,7 +50,7 @@ const Navbar = () => {
                 priority
               />
               <Image
-                src={interactLogo}
+                src={scrolled ? interactLogoWhite : interactLogo}
                 alt="INNOVATE IGNITE Logo"
                 width={160}
                 height={90}

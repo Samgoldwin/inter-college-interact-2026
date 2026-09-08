@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import interactLogo from "@/public/images/vvit-event-logo.png";
-import { ArrowRight, MapPin, Calendar } from "lucide-react";
-import { motion, useInView } from "framer-motion";
+import { ArrowRight, MapPin, Calendar, X, Phone } from "lucide-react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import { categories, marqueeItems } from "@/data/homeData";
 import ParticlesBackground from "@/components/ParticlesBackground";
 
@@ -107,7 +107,16 @@ function Marquee() {
 }
 
 // Events scheduled for INNOVATE IGNITE '26 (from the official plan)
-const eventsByDay = [
+type LineupEvent = {
+  name: string;
+  venue: string;
+  time: string;
+  staff: string[];
+  coordinators: { name: string; phone: string }[];
+  rules: string[];
+};
+
+const eventsByDay: { day: string; date: string; events: LineupEvent[] }[] = [
   {
     day: "DAY 1",
     date: "04 Dec 2026",
@@ -116,6 +125,11 @@ const eventsByDay = [
         name: "Ice Breaker",
         venue: "Seminar Hall 1 & 2",
         time: "9:30 AM – 11:00 AM",
+        staff: ["Prof. Kousar", "Prof. Masoom Bi"],
+        coordinators: [
+          { name: "Abitha M", phone: "9902338513" },
+          { name: "Shruthi M", phone: "9384620736" },
+        ],
         rules: [
           "All the team members must actively participate in the ice breaker.",
           "There will be only one round.",
@@ -128,6 +142,12 @@ const eventsByDay = [
         name: "Techninja (Quiz)",
         venue: "Seminar Hall 1",
         time: "11:00 AM – 1:00 PM",
+        staff: ["Prof. Kousar"],
+        coordinators: [
+          { name: "Arif", phone: "8971663835" },
+          { name: "Pratham", phone: "9743476288" },
+          { name: "Jaison", phone: "8217756591" },
+        ],
         rules: [
           "Number of participants: 2.",
           "There will be three rounds: Preliminary, Second and Final/Stage round.",
@@ -138,6 +158,13 @@ const eventsByDay = [
         name: "Code Conflux",
         venue: "002 & 004",
         time: "11:00 AM – 1:00 PM",
+        staff: ["Prof. Kusuma"],
+        coordinators: [
+          { name: "Aditya Raj", phone: "9341606324" },
+          { name: "Anushka", phone: "8197197536" },
+          { name: "Ashwini", phone: "" },
+          { name: "Sushma C", phone: "" },
+        ],
         rules: [
           "Number of participants: 2.",
           "Contest is based on OOP & Python programming and bugs.",
@@ -149,6 +176,13 @@ const eventsByDay = [
         name: "Symposium (Group Discussion)",
         venue: "Placement Cell & 304",
         time: "11:00 AM – 1:00 PM",
+        staff: ["Prof. Selva Agnes"],
+        coordinators: [
+          { name: "Varsha S", phone: "7019388708" },
+          { name: "Netra S", phone: "8088371640" },
+          { name: "Likitha", phone: "9739788564" },
+          { name: "Ravikiran", phone: "9742700324" },
+        ],
         rules: [
           "Number of participants: 2.",
           "Topics will be provided one day prior.",
@@ -163,6 +197,11 @@ const eventsByDay = [
         name: "Collage (Best Out of Waste)",
         venue: "Sports Room",
         time: "2:00 PM – 3:15 PM",
+        staff: ["Prof. Sushma B"],
+        coordinators: [
+          { name: "Sandhya", phone: "9482173354" },
+          { name: "Deekshitha", phone: "7676079332" },
+        ],
         rules: [
           "Team members: 2.",
           "Teams should bring newspapers/magazines/cello tape/scissors/drawing sheets and so on.",
@@ -174,6 +213,11 @@ const eventsByDay = [
         name: "Crucial Beats (Singing)",
         venue: "Seminar Hall 2",
         time: "2:00 PM – 3:15 PM",
+        staff: ["Prof. Shushma R"],
+        coordinators: [
+          { name: "Netra S", phone: "8088371640" },
+          { name: "Arpitha", phone: "9380724144" },
+        ],
         rules: [
           "Participant will not be allowed to refer to the lyrics.",
           "Time limit for the competition is 4 minutes.",
@@ -193,6 +237,12 @@ const eventsByDay = [
         name: "VV-Care",
         venue: "Seminar Hall 1 & 204",
         time: "9:30 AM – 11:00 AM",
+        staff: ["Prof. Rajani"],
+        coordinators: [
+          { name: "Sam Goldwin", phone: "9739431299" },
+          { name: "Charan", phone: "6362348311" },
+          { name: "Arshad Faraz", phone: "" },
+        ],
         rules: [
           "Set an objective for the video content.",
           "Capture a video with vendors and interview them well in advance.",
@@ -204,6 +254,11 @@ const eventsByDay = [
         name: "Cooking Without Fire",
         venue: "304 & 305",
         time: "10:00 AM – 11:15 AM",
+        staff: ["Prof. Sushma B"],
+        coordinators: [
+          { name: "Arpitha", phone: "9380724144" },
+          { name: "Bhaskar", phone: "7975194351" },
+        ],
         rules: [
           "Bring your own materials.",
           "No pre-cooked items and chopped items.",
@@ -217,6 +272,11 @@ const eventsByDay = [
         name: "Dance Elite",
         venue: "Seminar Hall 2",
         time: "10:00 AM – 12:00 PM",
+        staff: ["Prof. Masoom Bi"],
+        coordinators: [
+          { name: "K Kavya", phone: "7483563139" },
+          { name: "Lavanya K", phone: "8618691906" },
+        ],
         rules: [
           "Students should enroll before 2nd December.",
           "Competition includes all forms of dance.",
@@ -229,6 +289,11 @@ const eventsByDay = [
         name: "Talent Mania",
         venue: "Seminar Hall 1",
         time: "11:30 AM – 1:15 PM",
+        staff: ["Prof. Pavan Kumar"],
+        coordinators: [
+          { name: "Akshitha", phone: "8618502663" },
+          { name: "Likitha", phone: "9739788564" },
+        ],
         rules: [
           "Free style.",
           "Minimum 3 mins, max 5 mins.",
@@ -238,6 +303,11 @@ const eventsByDay = [
         name: "Dumb Charades",
         venue: "Seminar Hall 2",
         time: "2:00 PM – 3:45 PM",
+        staff: ["Prof. Shushma R"],
+        coordinators: [
+          { name: "Arpitha", phone: "9380724144" },
+          { name: "Deekshitha", phone: "7676079332" },
+        ],
         rules: [
           "5 members in each group.",
           "Titles will be given on the spot.",
@@ -251,6 +321,12 @@ const eventsByDay = [
         name: "BGMI & Free Fire",
         venue: "004",
         time: "2:00 PM – 4:00 PM",
+        staff: ["Prof. Pavan Kumar"],
+        coordinators: [
+          { name: "Akshitha", phone: "8618502663" },
+          { name: "Sushanth", phone: "8603977964" },
+          { name: "Anbarasu", phone: "" },
+        ],
         rules: [
           "4 player squad.",
           "Both Free Fire and BGMI.",
@@ -268,6 +344,24 @@ const eventsByDay = [
     PAGE
 ───────────────────────────────────────────── */
 export default function Home() {
+  const [activeEvent, setActiveEvent] = useState<LineupEvent | null>(null);
+
+  useEffect(() => {
+    document.body.style.overflow = activeEvent ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [activeEvent]);
+
+  useEffect(() => {
+    if (!activeEvent) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setActiveEvent(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [activeEvent]);
+
   return (
     <div
       className="min-h-screen"
@@ -361,8 +455,8 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <StatItem to={categories.reduce((acc, c) => acc + c.count, 0)} label="Events" />
-            <StatItem to={3} label="Days" />
+            <StatItem to={eventsByDay.reduce((acc, d) => acc + d.events.length, 0)} label="Events" />
+            <StatItem to={eventsByDay.length} label="Days" />
             <StatItem to={1000} label="Participants" />
             {/* <div className="flex flex-col gap-1">
               <span
@@ -404,7 +498,7 @@ export default function Home() {
               style={{ color: "hsl(var(--muted))" }}
             >
               <Calendar size={12} />
-              May 13–15, 2026
+              Dec 4–5, 2026
             </span>
             <span
               className="w-px h-3"
@@ -492,8 +586,32 @@ export default function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ delay: 0.08 + i * 0.06, duration: 0.4 }}
-                    className="rounded-[var(--radius)] overflow-hidden border"
-                    style={{ borderColor: "hsl(var(--border))", background: "hsl(var(--background))" }}
+                    onClick={() => setActiveEvent(ev)}
+                    className="rounded-[var(--radius)] overflow-hidden border cursor-pointer group"
+                    style={{
+                      borderColor: "hsl(var(--border))",
+                      background: "hsl(var(--background))",
+                      transition: "border-color .25s ease, box-shadow .25s ease",
+                    }}
+                    whileHover={{
+                      boxShadow: "0 14px 40px -18px hsl(var(--primary) / 0.35)",
+                    }}
+                    onHoverStart={() => {
+                      const el = document.querySelector(
+                        `[data-event-block="${ev.name}"]`
+                      ) as HTMLElement;
+                      el?.style.setProperty(
+                        "border-color",
+                        "hsl(var(--primary) / 0.45)"
+                      );
+                    }}
+                    onHoverEnd={() => {
+                      const el = document.querySelector(
+                        `[data-event-block="${ev.name}"]`
+                      ) as HTMLElement;
+                      el?.style.removeProperty("border-color");
+                    }}
+                    data-event-block={ev.name}
                   >
                     {/* event header row */}
                     <div className="px-6 py-4 flex items-center justify-between gap-4">
@@ -506,7 +624,7 @@ export default function Home() {
                         </span>
                         <div className="min-w-0">
                           <p
-                            className="font-display text-lg font-bold tracking-tight truncate"
+                            className="font-display text-lg font-bold tracking-tight"
                             style={{ color: "hsl(var(--foreground))" }}
                           >
                             {ev.name}
@@ -535,7 +653,7 @@ export default function Home() {
                       className="border-t px-6 py-4 space-y-2"
                       style={{ borderColor: "hsl(var(--border))" }}
                     >
-                      {ev.rules.map((rule) => (
+                      {ev.rules.slice(0, 3).map((rule) => (
                         <li key={rule} className="flex items-start gap-2.5">
                           <span
                             className="mt-1.5 shrink-0 h-1.5 w-1.5 rounded-full"
@@ -549,6 +667,14 @@ export default function Home() {
                           </span>
                         </li>
                       ))}
+                      {ev.rules.length > 3 && (
+                        <li
+                          className="font-mono-jb text-xs font-semibold uppercase tracking-[0.16em]"
+                          style={{ color: "hsl(var(--primary))" }}
+                        >
+                          + {ev.rules.length - 3} more — click to view rules
+                        </li>
+                      )}
                     </ul>
                   </motion.div>
                 ))}
@@ -689,6 +815,174 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ══ EVENT DETAIL POPUP ═══════════════════════════════════════════█ */}
+      <AnimatePresence>
+        {activeEvent && (
+          <motion.div
+            className="fixed inset-0 z-[90] flex items-center justify-center p-4 sm:p-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            {/* backdrop */}
+            <div
+              className="absolute inset-0"
+              style={{ background: "rgba(2, 10, 30, 0.65)", backdropFilter: "blur(4px)" }}
+              onClick={() => setActiveEvent(null)}
+            />
+
+            {/* popup card */}
+            <motion.div
+              className="relative w-full max-w-2xl max-h-[88vh] overflow-y-auto rounded-[var(--radius)] border"
+              style={{
+                background: "hsl(var(--background))",
+                borderColor: "hsl(var(--border))",
+                color: "hsl(var(--foreground))",
+                fontFamily: "'Outfit', sans-serif",
+              }}
+              initial={{ opacity: 0, y: 28, scale: 0.96 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 20, scale: 0.97 }}
+              transition={{ duration: 0.28, ease: "easeOut" }}
+            >
+              {/* header */}
+              <div className="px-6 py-5 border-b flex items-start justify-between gap-4 sticky top-0 z-10"
+                style={{
+                  borderColor: "hsl(var(--border))",
+                  background: "hsl(var(--card))",
+                }}
+              >
+                <div>
+                  <span className="eyebrow block mb-1">Event Details</span>
+                  <h3 className="font-display text-2xl md:text-3xl font-black tracking-tight leading-tight">
+                    {activeEvent.name}
+                  </h3>
+                </div>
+                <button
+                  onClick={() => setActiveEvent(null)}
+                  aria-label="Close"
+                  className="shrink-0 rounded-full p-2 transition-colors hover:scale-105"
+                  style={{ color: "hsl(var(--muted-foreground))" }}
+                >
+                  <X size={20} />
+                </button>
+              </div>
+
+              <div className="px-6 py-5 space-y-6">
+                {/* venue / time */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="flex items-center gap-3 px-4 py-3 rounded-[var(--radius)]"
+                    style={{ background: "hsl(var(--secondary) / 0.08)" }}
+                  >
+                    <MapPin size={18} style={{ color: "hsl(var(--primary))" }} />
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.16em] font-semibold"
+                        style={{ color: "hsl(var(--muted))" }}>
+                        Venue
+                      </p>
+                      <p className="text-sm font-semibold mt-0.5">{activeEvent.venue}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 px-4 py-3 rounded-[var(--radius)]"
+                    style={{ background: "hsl(var(--secondary) / 0.08)" }}
+                  >
+                    <Calendar size={18} style={{ color: "hsl(var(--primary))" }} />
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.16em] font-semibold"
+                        style={{ color: "hsl(var(--muted))" }}>
+                        Time
+                      </p>
+                      <p className="text-sm font-semibold mt-0.5">{activeEvent.time}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* rules */}
+                <div>
+                  <h4
+                    className="font-display text-lg font-black tracking-tight mb-3 uppercase"
+                    style={{ color: "hsl(var(--secondary))" }}
+                  >
+                    Rules & Guidelines
+                  </h4>
+                  <ul className="space-y-2.5">
+                    {activeEvent.rules.map((rule) => (
+                      <li key={rule} className="flex items-start gap-2.5">
+                        <span
+                          className="mt-1.5 shrink-0 h-1.5 w-1.5 rounded-full"
+                          style={{ background: "hsl(var(--primary))" }}
+                        />
+                        <span className="text-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
+                          {rule}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* coordinators */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="px-4 py-4 rounded-[var(--radius)] border"
+                    style={{ borderColor: "hsl(var(--border))", background: "hsl(var(--card))" }}
+                  >
+                    <p className="text-xs uppercase tracking-[0.16em] font-semibold mb-2"
+                      style={{ color: "hsl(var(--muted))" }}>
+                      Staff Coordinators
+                    </p>
+                    <ul className="space-y-1">
+                      {activeEvent.staff.map((s) => (
+                        <li key={s} className="text-sm font-medium">{s}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="px-4 py-4 rounded-[var(--radius)] border"
+                    style={{ borderColor: "hsl(var(--border))", background: "hsl(var(--card))" }}
+                  >
+                    <p className="text-xs uppercase tracking-[0.16em] font-semibold mb-2"
+                      style={{ color: "hsl(var(--muted))" }}>
+                      Student Coordinators
+                    </p>
+                    <ul className="space-y-1">
+                      {activeEvent.coordinators.map((c) => (
+                        <li key={c.name} className="text-sm font-medium flex items-center gap-1.5">
+                          {c.name}
+                          {c.phone ? (
+                            <a
+                              href={`tel:${c.phone}`}
+                              className="inline-flex items-center gap-1 transition-colors"
+                              style={{ color: "hsl(var(--primary))" }}
+                            >
+                              <Phone size={12} /> {c.phone}
+                            </a>
+                          ) : null}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* register CTA */}
+                <div className="pt-1">
+                  <Link
+                    href="/register"
+                    className="w-full flex items-center justify-center gap-2 py-3.5 rounded-[var(--radius)] font-semibold transition-transform hover:scale-[1.01] active:scale-[0.99]"
+                    style={{
+                      background: "hsl(var(--primary))",
+                      color: "hsl(var(--primary-foreground))",
+                      fontFamily: "'Outfit', sans-serif",
+                    }}
+                  >
+                    Register for {activeEvent.name}
+                    <ArrowRight size={18} />
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
